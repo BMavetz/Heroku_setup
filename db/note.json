@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Rent",
+        "text": "Remember to pay rent on the first day of the month.",
+        "id": "8c6f"
+    },
+    {
+        "title": "Laundry",
+        "text": "Take laundry out of dryer at end of day, fold clothes and put away.",
+        "id": "1779"
+    },
+    {
+        "title": "Coding HW",
+        "text": "Finish coding HW before midnight of due date.\n",
+        "id": "6943"
+    },
+    {
+        "title": "Groceries",
+        "text": "Need to buy groceries before end of the week.",
+        "id": "a45a"
+    }
+]
