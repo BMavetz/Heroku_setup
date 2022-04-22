@@ -15,6 +15,7 @@ const readAndAppend = (content, file) => {
       console.error(err);
     } else {
       const parsedData = JSON.parse(data);
+      console.log(parsedData);
       parsedData.push(content);
       writeToFile(file, parsedData);
     }
@@ -25,7 +26,7 @@ const removeNote = (note, notesArray) => {
     // removes specific note from notes array
     const index = notesArray.indexOf(note);
     notesArray.splice(index, 1);
-
+    console.log(`${notesArray}`);
     // rewrites db.json with new array
     fs.writeFileSync(
         path.join(__dirname, '../db/note.json'),

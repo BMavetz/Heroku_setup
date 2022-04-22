@@ -23,5 +23,10 @@
         "title": "Read",
         "text": "Finish reading book by next week",
         "id": "f188"
+    },
+    {
+        "title": "Exercise",
+        "text": "Goal is to workout 4x this week",
+        "id": "efdb"
     }
 ]

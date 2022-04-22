@@ -32,5 +32,23 @@ noteList.post('/', (req, res) => {
       res.json('Error in posting new note');
     }
   });
+
+  const notes = require('../db/note.json');
+const {removeNote} = require('../helpers/fsUtils');
+
+noteList.delete('/:id', (req, res) => {
+    console.log('100');
+    console.log(req.params.id);
+    const noteID = req.params.id;
+    for (let i = 0; i < notes.length; i++) {
+        const currentNote = notes[i];
+        if (currentNote.id === noteID) {
+          removeNote(currentNote, notes);
+          return;
+        }
+      }
   
-  module.exports = noteList, app;
+    res.json();
+});
+  
+  module.exports = noteList;
