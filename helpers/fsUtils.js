@@ -21,4 +21,16 @@ const readAndAppend = (content, file) => {
   });
 };
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+const removeNote = (note, notesArray) => {
+    // removes specific note from notes array
+    const index = notesArray.indexOf(note);
+    notesArray.splice(index, 1);
+
+    // rewrites db.json with new array
+    fs.writeFileSync(
+        path.join(__dirname, '../db/note.json'),
+        JSON.stringify({ notes: notesArray }, null, 2)
+    );
+};
+
+module.exports = { readFromFile, writeToFile, readAndAppend, removeNote };
